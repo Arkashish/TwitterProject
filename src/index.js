@@ -38,7 +38,7 @@ app.listen(3000, async () => {
 // app.listen(3000, async () => {
 //     console.log("server Started at 3000");
 //     // mongo db connection establishment
-//     // mongoose.connect('mongodb+srv://arkashish:txdqKV1kgXP7DcMb@cluster0.vruaqn2.mongodb.net/')
+
 //     connect();
 //     console.log("Mongo DB connected");
 

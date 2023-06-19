@@ -5,11 +5,16 @@ import Hashtag from "./models/hashtag.js";
 import TweetRepository from "./repository/tweet-repository.js";
 import router from "./routes/index.js";
 import bodyParser from "body-parser";
+import passport from "passport";
+import { passportAuth } from "./middlewares/jwt-middleware.js";
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(passport.initialize());
+passportAuth(passport);
 
 app.use('/api', router);
 app.listen(3000, async () => {
